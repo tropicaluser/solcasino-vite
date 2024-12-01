@@ -1,0 +1,66 @@
+.shaking-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.box {
+  background-color: #f9f9f9; /* Light background for the box */
+  color: black;
+  padding: 20px;
+  width: 250px; /* Adjust width as needed */
+  height: 220px; /* Increase height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px; /* Increase rounding for softer corners */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
+
+
+.game-info {
+  text-align: center;
+  font-size: 16px;
+}
+
+.transaction-id {
+  font-weight: bold;
+}
+
+
+
+/* Transaction ID and win amount */
+.transaction-id {
+  font-size: 14px;
+  color: #000000;
+  margin: 5px 0; /* Space between transaction ID and amount */
+}
+
+/* Date (if needed in the future) */
+.transaction-date {
+  font-size: 12px;
+  color: #000000; /* Lighter color for the date */
+}
+
+/* Box hover effects for visual feedback */
+.box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Transaction ID styling */
+.transaction-id {
+  font-size: 14px;
+  font-weight: bold; /* Make the transaction ID bold */
+  color: #000000; /* Dark color for readability */
+  margin-bottom: 5px; /* Space between transaction ID and win amount */
+  text-align: center; /* Center the transaction ID */
+  word-wrap: break-word; /* Allow long transaction IDs to wrap in the box */
+}
+.shaking-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
