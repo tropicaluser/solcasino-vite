@@ -10,6 +10,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import { DEFAULT_POOL, PLATFORM_CREATOR_ADDRESS, PLATFORM_CREATOR_FEE, PLATFORM_JACKPOT_FEE, PLATFORM_REFERRAL_FEE, RPC_ENDPOINT, TOKEN_METADATA, TOKEN_METADATA_FETCHER } from './constants'
 import './styles.css'
+import {ChartProvider} from './context/chart-context'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 
@@ -46,7 +47,9 @@ function Root() {
                       prefix="code"
                       fee={PLATFORM_REFERRAL_FEE}
                     >
-                      <App />
+                      <ChartProvider>
+                        <App />
+                      </ChartProvider>
                     </ReferralProvider>
                   </GambaPlatformProvider>
                 </GambaProvider>

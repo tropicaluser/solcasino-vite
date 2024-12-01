@@ -18,6 +18,8 @@ import NewHeader from './sections/NewHeader';
 //import RecentPlays from './sections/RecentPlays/RecentPlays';
 import Toasts from './sections/Toasts';
 import { MainWrapper, TosInner, TosWrapper } from './styles';
+import CrashChart from './sections/NewChart';
+import SidebarPlay from './sections/NewChart/SidebarPlay';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -77,15 +79,22 @@ export default function App() {
       <ErrorHandler />
       <NewHeader />
       {/*<Header />*/}
+
+      
       <Toasts />
       <MainWrapper>
+      Game
+      <CrashChart />
+      <SidebarPlay />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/:gameId" element={<Game />} />
         </Routes>
 
+        
+
         {/* Game List Section */}
-        <div className="flex flex-col items-start gap-8 content-start gap-y-3.5 w-full p-5 rounded-xl border border-[rgba(168,168,168,0.1)] bg-[#171919]" style={{ scrollbarColor: '#50d593 transparent' }}>
+        {/*<div className="flex flex-col items-start gap-8 content-start gap-y-3.5 w-full p-5 rounded-xl border border-[rgba(168,168,168,0.1)] bg-[#171919]" style={{ scrollbarColor: '#50d593 transparent' }}>
           <div className="flex w-full justify-between">
             <div className="flex justify-center items-center gap-2">
               <img alt="" loading="lazy" width="36" height="30" decoding="async" className="w-[20px]" src="https://www.guacamole.gg/images/themes/yellow.png" style={{ color: 'transparent' }} />
@@ -115,11 +124,12 @@ export default function App() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Trending Tokens Section */}
-        <TrendingTokens />
-        <TrendingPools />
+
+        {/* Trending Tokens Section   <TrendingTokens />
+        <TrendingPools /> */}
+       
         <TransactionList />
         <Footer />
       </MainWrapper>
