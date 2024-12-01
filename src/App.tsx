@@ -14,6 +14,7 @@ import { useUserStore } from './hooks/useUserStore';
 import Dashboard from './sections/Dashboard/Dashboard';
 import Game from './sections/Game/Game';
 import Header from './sections/Header';
+import NewHeader from './sections/NewHeader';
 //import RecentPlays from './sections/RecentPlays/RecentPlays';
 import Toasts from './sections/Toasts';
 import { MainWrapper, TosInner, TosWrapper } from './styles';
@@ -74,7 +75,8 @@ export default function App() {
       )}
       <ScrollToTop />
       <ErrorHandler />
-      <Header />
+      <NewHeader />
+      {/*<Header />*/}
       <Toasts />
       <MainWrapper>
         <Routes>
